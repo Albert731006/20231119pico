@@ -22,7 +22,8 @@ while max_wait > 0:
     print("等待連線")
     time.sleep(1)
 
-#處理錯誤
+# 檢查目前的連線狀態
+
 if wlan.status() != 3:
     raise RuntimeError('連線失敗')
 else:
