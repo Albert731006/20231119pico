@@ -45,7 +45,7 @@ def callback1(t:Timer):
     delta = time.ticks_diff(time.ticks_ms(), start)
     print(delta)
     #溫度超過24度,並且發送alert()的時間已經大於60秒
-    if temperature >= 24 and delta >= 60 * 1000:        
+    if temperature >= 27.5 and delta >= 60 * 1000:        
         alert()
         start = time.ticks_ms()#重新設定計時的時間
 
