@@ -46,7 +46,7 @@ def alert(t:float):
     minites = date_tuple[5]
     second = date_tuple[6]
     date_str = f'{year}-{month}-{day} {hour}:{minites}:{second}'
-    response = requests.get(f'https://hook.eu2.make.com/vm1owivb4sil9rmw4ad4at65t5f8cz4b?name=機台溫度&date={date_str}&temperature={t}')
+    response = requests.get(f'https://hook.eu2.make.com/vm1owivb4sil9rmw4ad4at65t5f8cz4b?name=機台溫度通報!&date={date_str}&temperature={t}')
     print(help(response))
     response.close()
     
