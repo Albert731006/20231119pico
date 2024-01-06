@@ -1,5 +1,6 @@
 import network
 import time
+from machine import Timer
 from machine import WDT
 
 def connect():
@@ -31,9 +32,21 @@ def connect():
     else:
         print("成功連線")
         print(nic.ifconfig())
-        
+  
+def mycallback(t):
+    print("Hello! Pico!")
+    t.deinit()
+    
 connect()
 
+tim = Timer()
+tim.init(period=1000, callback=mycallback)
 
+
+
+
+
+
+    
     
     
