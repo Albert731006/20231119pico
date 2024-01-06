@@ -1,6 +1,7 @@
 import network
 import time
 from machine import WDT,Timer,ADC
+import urequests as requests
 
 def connect():
     # enable station interface and connect to WiFi access point
@@ -35,6 +36,9 @@ def connect():
 
 def alert():
     print('要爆炸了!')
+    response = requests.get('https://hook.eu2.make.com/vm1owivb4sil9rmw4ad4at65t5f8cz4b')
+    print(help(response))
+    response.close()
     
 def callback1(t:Timer):
     global start
@@ -45,7 +49,7 @@ def callback1(t:Timer):
     delta = time.ticks_diff(time.ticks_ms(), start)
     print(delta)
     #溫度超過24度,並且發送alert()的時間已經大於60秒
-    if temperature >= 27.5 and delta >= 60 * 1000:        
+    if temperature >= 24 and delta >= 60 * 1000:        
         alert()
         start = time.ticks_ms()#重新設定計時的時間
 
