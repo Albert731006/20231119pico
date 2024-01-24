@@ -7,8 +7,8 @@ from machine import WDT
 rp2.country('TW')
 
 
-ssid = 'yioyioman'
-password = '0912886806'
+ssid = 'home'
+password = '035513659'
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
