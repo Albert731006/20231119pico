@@ -10,8 +10,6 @@ rp2.country('TW')
 ssid = 'yioyioman'
 password = '0912886806'
 
-
-
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
 wlan.connect(ssid, password)
@@ -54,3 +52,4 @@ def reconnect():
         wlan.disconnect()
         wlan.connect(ssid, password)
         connect()
+        
