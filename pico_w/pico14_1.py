@@ -7,7 +7,7 @@ def fun10(t:Timer | None = None):
 
 led = Pin(15, Pin.OUT)
 timer10 = Timer(period=10000, mode=Timer.PERIODIC, callback=fun10)
-fun10()
+
 
 
 while True:
