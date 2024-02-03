@@ -11,7 +11,7 @@ url = 'https://blynk.cloud/external/api/get?token=-KbMBBGu5P410XNnXqs-e18vc24DiA
 response = requests.request("GET",url)
 if response.status_code == 200:
     all_data = response.json()
-    st.info(f'光線:{all_data["vo"]}')
+    st.info(f'光線:{all_data["v0"]}')
     st.warning(f'可變電阻:{all_data["v1"]}')
    
 else:
